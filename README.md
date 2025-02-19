@@ -7,7 +7,7 @@ The dataset used came from Kaggle dataset : https://www.kaggle.com/datasets/maru
 
 ## Situation
 
-Nowadays, due to an evolution of the technology, digital banking emerges, leading to people making more online financial transaction.   
+In today's digital age, digital banking emerges, leading to people making more online financial transaction.   
 
 However, the risk of fraud transactions increased as well.  The most common fraud came from credit card fraud (use of someone's credit card without their consent), identity issue, online payment, and so on. It can occurs during a purchase, a money tranfer or even a withdrawal at the ATM.  
 
@@ -79,10 +79,3 @@ In our case, **AUC = 99%**.
 - Data cleaning, preparation and feature engineering are the most important steps.
 - Training a model can be time-consuming. 
 - Importance to document your code to be as readable as possible. An error can occur and you may have to investigate into it. 
-
-## Versioning packages
-
-imblearn==0.12.4   
-pandas==2.2.3  
-seaborn==0.13.2  
-sklearn==1.6.1
