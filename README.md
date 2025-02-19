@@ -19,7 +19,7 @@ How can we detect if a transaction is whether a fraud or not?
 
 ## Actions
 
-<ins>1. Data Quality:</ins>
+<ins>1. Data Quality</ins>
 - Loading the dataset
 - Checking types of the columns
 - Checking missing values
@@ -30,7 +30,7 @@ How can we detect if a transaction is whether a fraud or not?
 - Selecting objects columns where the number of unique values does not exceed 10
 - Selecting the numbers columns (int and float types) 
 
-3. Data preparation: 
+<ins>3. Data preparation</ins>
 
 - Removing outliers using Inter Quartile Range
 - Encoding the categorical variables with an Ordinal Encoder
@@ -40,12 +40,12 @@ How can we detect if a transaction is whether a fraud or not?
 - Oversampling the data to have the same proportion of instances between classes
 - Split the whole dataset into 3 datasets: training set, validation set, testing set
 
-4. Training the model
+<ins>4. Training the model</ins>
 
 - Selecting the classifiers to train : Random Forest Classifier, K-NN Classifier, Gradient Boosting Classifier
 - Selecting ways to evaluate the models. Two scoring chosen to choose the best model : Recall and Accuracy. 
 
-5. Evaluate the model
+<ins>5. Evaluating the model</ins>
 
 - Displaying the confusion matrix
 - Printing the classification report (F1-score, Recall, Precision)
@@ -53,24 +53,26 @@ How can we detect if a transaction is whether a fraud or not?
 
 ## Results
 
-The best performance between the three classifiers is presented by the Random Forest Classifier with an accuracy of 96.59%.  
+The best performance between the three classifiers is presented by the Random Forest Classifier with an **accuracy of 96.59%**.  
 The accuracy of a model for a classifier can be defined by the number of instances well predicted devided by the total number of instances. 
 
 ![screenshot](images/confusion_matrix.png)
 
 A confusion matrix compared the expected values with the predicted ones from the model. You can calculate with this some important metrics for a classifier such as F1-score, Precision or Recall.  
 Increasing the accuracy involved maximizing the declining diagonal (from top left to bottom right).  
-The confusion matrix of the current model shows strong performance due to a high F1-score (97%) and accuracy. 
+
+The confusion matrix of the current model shows strong performance due to a high **F1-score (=97%)** and accuracy. 
 
 ![screenshot](images/roc_curve.png)
 
 The current model is a binary classification, meaning the resulting output shown will be either 0 or 1 (0 = Not a fraud, 1 = fraud).  
 In reality, the model calculates a probability for class 0 and 1; and by default, if the probability exceed a threshold of 0.5, it reprensents the class itself.  
 e.g: model_prediction_proba_class_1 = 0.65 --> Prediction = Class 1.  
+
 However, changing the threshold may lead to a better performance from the model. One way to know how to choose the threshold is by computing the ROC (Receiver Operating Characteristic) curve shown above.  
 A fastest way to analyze this curve is to look at the AUC (Area Under Curve). 
 Generally, the higher the area, the greater is the model.  
-In our case, AUC = 99%.
+In our case, **AUC = 99%**.
 
 ## Lessons Learned
 
