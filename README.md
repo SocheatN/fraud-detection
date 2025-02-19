@@ -79,3 +79,10 @@ In our case, **AUC = 99%**.
 - Data cleaning, preparation and feature engineering are the most important steps.
 - Training a model can be time-consuming. 
 - Importance to document your code to be as readable as possible. An error can occur and you may have to investigate into it. 
+
+## Versioning packages
+
+imblearn==0.12.4   
+pandas==2.2.3  
+seaborn==0.13.2  
+sklearn==1.6.1
