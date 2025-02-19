@@ -19,14 +19,14 @@ How can we detect if a transaction is whether a fraud or not?
 
 ## Actions
 
-1. Data Quality: 
+<ins>1. Data Quality:</ins>
 - Loading the dataset
 - Checking types of the columns
 - Checking missing values
 
 
 
-2. Feature Engineering
+<ins>2. Feature Engineering</ins>
 - Selecting objects columns where the number of unique values does not exceed 10
 - Selecting the numbers columns (int and float types) 
 
@@ -54,10 +54,26 @@ How can we detect if a transaction is whether a fraud or not?
 ## Results
 
 The best performance between the three classifiers is presented by the Random Forest Classifier with an accuracy of 96.59%.  
+The accuracy of a model for a classifier can be defined by the number of instances well predicted devided by the total number of instances. 
 
 ![screenshot](images/confusion_matrix.png)
 
+A confusion matrix compared the expected values with the predicted ones from the model. You can calculate with this some important metrics for a classifier such as F1-score, Precision or Recall.  
+Increasing the accuracy involved maximizing the declining diagonal (from top left to bottom right).  
+The confusion matrix of the current model shows strong performance due to a high F1-score (97%) and accuracy. 
+
+![screenshot](images/roc_curve.png)
+
+The current model is a binary classification, meaning the resulting output shown will be either 0 or 1 (0 = Not a fraud, 1 = fraud).  
+In reality, the model calculates a probability for class 0 and 1; and by default, if the probability exceed a threshold of 0.5, it reprensents the class itself.  
+e.g: model_prediction_proba_class_1 = 0.65 --> Prediction = Class 1.  
+However, changing the threshold may lead to a better performance from the model. One way to know how to choose the threshold is by computing the ROC (Receiver Operating Characteristic) curve shown above.  
+A fastest way to analyze this curve is to look at the AUC (Area Under Curve). 
+Generally, the higher the area, the greater is the model.  
+In our case, AUC = 99%.
+
 ## Lessons Learned
 
-
- 
+- Data cleaning, preparation and feature engineering are the most important steps.
+- Training a model can be time-consuming. 
+- Importance to document your code to be as readable as possible. An error can occur and you may have to investigate into it. 
