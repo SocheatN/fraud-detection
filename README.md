@@ -53,6 +53,9 @@ How can we detect if a transaction is whether a fraud or not?
 
 ## Results
 
+The best performance between the three classifiers is presented by the Random Forest Classifier with an accuracy of 96.59%.  
+
+![confusion_matrix](https://github.com/[SocheatN]/[fraud_detection]/blob/[main]/confusion_matrix.jpg?raw=true)
 
 ## Lessons Learned
 
